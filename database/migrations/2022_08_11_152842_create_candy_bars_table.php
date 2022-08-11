@@ -19,7 +19,7 @@ class CreateCandyBarsTable extends Migration
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->string('image');
             $table->string('name');
-            $table->unique('rating');
+            $table->unsignedInteger('rating')->nullable()->default(null);
             $table->timestamps();
         });
     }
