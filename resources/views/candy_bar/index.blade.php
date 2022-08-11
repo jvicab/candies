@@ -12,7 +12,7 @@
                             {{ session('status') }}
                         </div>
                     @endif
-                    <a href="{{ route('candy_bar_create') }}" type="submit" class="btn btn-success">
+                    <a href="{{ route('candy_bar_create') }}" class="btn btn-success">
                         {{ __('New') }}
                     </a>
                 </div>
