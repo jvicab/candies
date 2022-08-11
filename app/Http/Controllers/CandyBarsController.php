@@ -11,8 +11,6 @@ class CandyBarsController extends Controller
 {
     public function __construct()
     {
-        parent::__construct();
-
         CandyBar::observe(new CandyBarObserver);
     }
 

@@ -26,8 +26,9 @@ Route::group(['middleware' => 'auth'], function (){
     Route::get('/home', [App\Http\Controllers\DashboardController::class, 'index'])->name('home');
 
     Route::group(['prefix' => 'candy-bars'], function (){
-        Route::get('/', [App\Http\Controllers\CandyBarsController::class, 'create'])->name('candy_bar_create');
-        Route::post('/', [App\Http\Controllers\CandyBarsController::class, 'store'])->name('candy_bar_store');
+        Route::get('/', [App\Http\Controllers\CandyBarsController::class, 'index'])->name('candy_bar_list');
+        Route::get('/create', [App\Http\Controllers\CandyBarsController::class, 'create'])->name('candy_bar_create');
+        Route::post('/store', [App\Http\Controllers\CandyBarsController::class, 'store'])->name('candy_bar_store');
     });
 
 
