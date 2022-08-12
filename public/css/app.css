@@ -11086,3 +11086,105 @@ html, body {
 .dropzone .download > * {
   margin: 0 0 0 5px;
 }
+
+/** begin Dropzone */
+.admin-form .dropzone {
+  border: 1px solid #DDD;
+  padding: 0;
+  height: 100%;
+  min-height: 60px;
+  min-width: 60px;
+  box-sizing: border-box;
+  margin-left: 0;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: inline-block;
+  /** Sizes and dimensions: */
+  /** candy bar  (500 x 500) */
+}
+.admin-form .dropzone .dz-default.dz-message {
+  cursor: pointer;
+  background-image: none;
+  width: 100%;
+  top: 23%;
+  text-align: center;
+  left: 0;
+  height: 89%;
+  margin: 20px 0;
+}
+.admin-form .dropzone .dz-default.dz-message span.main-text,
+.admin-form .dropzone .dz-default.dz-message span.main-text b,
+.admin-form .dropzone .dz-default.dz-message span.sub-text {
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: normal;
+  color: #939393;
+}
+.admin-form .dropzone .dz-default.dz-message i.fa {
+  cursor: pointer;
+  color: #4A89DC;
+  font-size: 100px;
+  display: block;
+  margin-bottom: 0;
+  margin-top: 10px;
+}
+.admin-form .dropzone a.dz-remove,
+.admin-form .dropzone .dropzone-previews a.dz-remove {
+  margin-top: 5px;
+  border-radius: 0;
+}
+.admin-form .dropzone .dz-preview {
+  background: none repeat scroll 0 0 rgba(255, 255, 255, 0.8);
+  position: relative;
+  display: inline-block;
+  margin: 8px;
+  padding: 6px;
+  vertical-align: top;
+  border: 1px solid #DBD8D8;
+  height: 200px;
+}
+.admin-form .dropzone .dz-preview .dz-image {
+  border-radius: 5px;
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+  display: block;
+  z-index: 10;
+  margin: 0;
+  height: 155px;
+}
+.admin-form .dropzone .dz-preview .dz-image img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.admin-form .dropzone .dz-preview .dz-remove {
+  margin: 5px auto 2px;
+  width: 100%;
+  text-decoration: none;
+  color: #666;
+  background-image: linear-gradient(to bottom, #FAFAFA, #EEE);
+  border-radius: 2px;
+  border: 1px solid #EEE;
+  display: block;
+  padding: 4px 5px;
+  text-align: center;
+}
+.admin-form .dropzone::after {
+  content: "Click here to upload an image or drag it and drop it here";
+  font-size: 12px;
+  color: #B0B0B0;
+  position: absolute;
+  bottom: 10px;
+  left: 5px;
+  width: 96%;
+  text-align: center;
+  z-index: 0;
+}
+.admin-form .dropzone.dropzone-250x250 {
+  width: 250px;
+  height: 250px;
+}
+
+/** END dropzone */

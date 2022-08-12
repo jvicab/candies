@@ -15,6 +15,14 @@ use Illuminate\Support\Facades\Route;
 
 Auth::routes();
 
+/***********************************  Ajax  ***********************************/
+
+Route::group(['prefix' => 'ajax'], function (){
+    Route::post('ajax-upload-image', [\App\Http\Controllers\AjaxController::class, 'uploadImage'])->name('ajax_upload_image');
+    Route::post('ajax-delete-image', [\App\Http\Controllers\AjaxController::class, 'deleteImage'])->name('ajax_delete_image');
+
+});
+
 /** frontend routes */
 
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index']);
