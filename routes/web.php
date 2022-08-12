@@ -13,10 +13,33 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+/***********************************  Ajax  ***********************************/
+
+Route::group(['prefix' => 'ajax'], function (){
+    Route::post('ajax-upload-image', [\App\Http\Controllers\AjaxController::class, 'uploadImage'])->name('ajax_upload_image');
+    Route::post('ajax-delete-image', [\App\Http\Controllers\AjaxController::class, 'deleteImage'])->name('ajax_delete_image');
+
+});
+
+/** frontend routes */
+
+Route::get('/', [App\Http\Controllers\HomeController::class, 'index']);
+
+
+/** backend routes */
+
+Route::group(['middleware' => 'auth'], function (){
+    Route::get('/home', [App\Http\Controllers\DashboardController::class, 'index'])->name('home');
+
+    Route::group(['prefix' => 'candy-bars'], function (){
+        Route::get('/', [App\Http\Controllers\CandyBarsController::class, 'index'])->name('candy_bar_list');
+        Route::get('/create', [App\Http\Controllers\CandyBarsController::class, 'create'])->name('candy_bar_create');
+        Route::post('/store', [App\Http\Controllers\CandyBarsController::class, 'store'])->name('candy_bar_store');
+    });
+
+
+});
+
+
