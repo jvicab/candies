@@ -8,11 +8,7 @@
                     <div class="card-header">{{ __('New Candy Bar') }}</div>
 
                     <div class="card-body">
-                        @if (session('status'))
-                            <div class="alert alert-success" role="alert">
-                                {{ session('status') }}
-                            </div>
-                        @endif
+                        @include('alerts.alerts')
 
                         <form id="candy_bar_form" action="{{ route('candy_bar_store') }}" method="POST" class="admin-form">
                             @csrf

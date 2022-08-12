@@ -13,7 +13,43 @@
 // html5imageupload
 @import 'html5imageupload.min';
 
+/** bootstrap dismissable alert styles */
+
+.close {
+    float: right;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1;
+    color: #000;
+    text-shadow: 0 1px 0 #fff;
+    opacity: .5;
+}
+
+button.close {
+    padding: 0;
+    background-color: transparent;
+    border: 0;
+    -webkit-appearance: none;
+}
+
+.alert-dismissible .close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0.75rem 1.25rem;
+    color: inherit;
+}
+
+.close:not(:disabled):not(.disabled) {
+    cursor: pointer;
+}
+
+
 /** begin Dropzone */
+
+$img-path: "../images" !default;
+
+// url('#{$fa-font-path}/fontawesome-webfont.eot?v=#{$fa-version}');
 
 .admin-form {
     .dropzone {
@@ -24,12 +60,11 @@
         min-width: 60px;
         box-sizing: border-box;
         margin-left: 0;
-     //   background-image: url("../images/dropzone_camera.png");
+        background-image: url('#{$img-path}/dropzone_camera.png');
         background-position: center center;
         background-repeat: no-repeat;
         background-size: cover;
         display: inline-block;
-
         .btn {
             &.btn-danger {
                 color: #FFF;
@@ -57,9 +92,8 @@
                 border-color: #f6bb42;
             }
         }
-
         &.state-error {
-   //         background-image: url("../images/dropzone_camera_red.png");
+     //        background-image: url('#{$img-path}/dropzone_camera_red.png');
         }
         .dz-default {
             &.dz-message {
@@ -156,3 +190,25 @@
     }
 }
 /** END dropzone */
+
+.list-table {
+    margin-top: 20px;
+    margin-bottom: 30px;
+    th,td {
+        text-align: center;
+        vertical-align: middle;
+    }
+    .td-image {
+        width: 110px;
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+    .td-rating {
+        width: 120px;
+    }
+}
+
+

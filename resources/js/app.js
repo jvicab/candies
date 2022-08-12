@@ -5,6 +5,12 @@ var csrfToken = $('meta[name="csrf-token"]').attr('content');
 
 $.ajaxSetup({ headers: {'X-CSRF-TOKEN': csrfToken } });
 
+/** close dismissable alert */
+
+$('.alert').on('click', '.close', function(){
+    $(this).closest('.alert').alert('close');
+});
+
 /** dropzone related functions */
 
 function resetError(el)
