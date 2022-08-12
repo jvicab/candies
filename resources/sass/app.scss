@@ -7,6 +7,9 @@
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
 
+// Fontawesome
+@import "node_modules/font-awesome/scss/font-awesome.scss";
+
 // html5imageupload
 @import 'html5imageupload.min';
 
@@ -26,6 +29,34 @@
         background-repeat: no-repeat;
         background-size: cover;
         display: inline-block;
+
+        .btn {
+            &.btn-danger {
+                color: #FFF;
+                background-color: #e9573f;
+                border-color: #e9573f;
+            }
+            &.btn-default {
+                color: #666;
+                background-color: #f0f0f0;
+                border-color: rgba(0,0,0,0.1);
+            }
+            &.btn-info {
+                color: #FFF;
+                background-color: #3bafda;
+                border-color: #3bafda;
+            }
+            &.btn-success {
+                color: #FFF;
+                background-color: #70ca63;
+                border-color: #70ca63;
+            }
+            &.btn-warning {
+                color: #FFF;
+                background-color: #f6bb42;
+                border-color: #f6bb42;
+            }
+        }
 
         &.state-error {
    //         background-image: url("../images/dropzone_camera_red.png");

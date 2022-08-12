@@ -37,8 +37,6 @@ var image_required = image_widget.data('required') === true;
 var image_deleted = image.val() === "";
 var create = $('input:hidden[name="_method"]').length === 0;
 
-alert(candyBarForm.attr('id'));
-
 image_widget.html5imageupload({
     onAfterSelectImage: function() {
         resetError($(this.element));
