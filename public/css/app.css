@@ -14288,3 +14288,7 @@ button.close {
 .list-table .td-rating {
   width: 120px;
 }
+.list-table .td-actions {
+  width: 100px;
+  text-align: center;
+}
