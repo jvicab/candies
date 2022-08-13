@@ -14,9 +14,15 @@ class CandyBarsController extends Controller
         CandyBar::observe(new CandyBarObserver);
     }
 
-    public function index()
+    public function index(Request $request)
     {
-        return view('candy_bar.index');
+        $candyBars = CandyBar::own()->orderBy('rating', 'DESC')->paginate(4);
+
+        $data = [
+            'candyBars' => $candyBars,
+        ];
+
+        return view('candy_bar.index', $data);
     }
 
     public function create()
@@ -35,7 +41,7 @@ class CandyBarsController extends Controller
             return redirect()->back()->with('error', $e->getMessage());
         }
 
-        return redirect()->back()->with('Success', 'Candy bar added.');
+        return redirect()->route('candy_bar_list')->with('success', 'Candy bar added.');
     }
 
 

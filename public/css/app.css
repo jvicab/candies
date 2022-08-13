@@ -14114,6 +14114,36 @@ html, body {
   margin: 0 0 0 5px;
 }
 
+/** bootstrap dismissable alert styles */
+.close {
+  float: right;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1;
+  color: #000;
+  text-shadow: 0 1px 0 #fff;
+  opacity: 0.5;
+}
+
+button.close {
+  padding: 0;
+  background-color: transparent;
+  border: 0;
+  -webkit-appearance: none;
+}
+
+.alert-dismissible .close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0.75rem 1.25rem;
+  color: inherit;
+}
+
+.close:not(:disabled):not(.disabled) {
+  cursor: pointer;
+}
+
 /** begin Dropzone */
 .admin-form .dropzone {
   border: 1px solid #DDD;
@@ -14240,3 +14270,21 @@ html, body {
 }
 
 /** END dropzone */
+.list-table {
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+.list-table th, .list-table td {
+  text-align: center;
+  vertical-align: middle;
+}
+.list-table .td-image {
+  width: 110px;
+}
+.list-table .td-image img {
+  width: 100%;
+  height: auto;
+}
+.list-table .td-rating {
+  width: 120px;
+}

@@ -17,7 +17,7 @@ class CandyBarRequest extends FormRequest
     public function rules()
     {
         return [
-            'user_id' => ['required', new UnsignedInteger],
+            'user_id' => ['nullable', new UnsignedInteger],
             'image'   => ['required', new FileName],
             'name'    => 'required',
             'rating'  => ['nullable', new UnsignedInteger, 'min:1', 'max:5'],

@@ -23,4 +23,11 @@ class CandyBar extends Model
         return $this->belongsTo(User::class,);
     }
 
+    /*** scopes */
+
+    public function scopeOwn($query)
+    {
+        return $query->where('user_id', auth()->user()->id);
+    }
+
 }
