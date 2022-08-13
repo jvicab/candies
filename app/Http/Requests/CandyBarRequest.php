@@ -6,6 +6,7 @@ use Illuminate\Foundation\Http\FormRequest;
 
 use App\Rules\UnsignedInteger;
 use App\Rules\FileName;
+use App\Rules\Rating;
 
 class CandyBarRequest extends FormRequest
 {
@@ -20,7 +21,7 @@ class CandyBarRequest extends FormRequest
             'user_id' => ['nullable', new UnsignedInteger],
             'image'   => ['required', new FileName],
             'name'    => 'required',
-            'rating'  => ['nullable', new UnsignedInteger, 'min:1', 'max:5'],
+            'rating'  => ['nullable', new Rating],
         ];
     }
 }

@@ -10,13 +10,13 @@
                     @include('alerts.alerts')
 
                     <a href="{{ route('candy_bar_create') }}" class="btn btn-success">
-                        <i class="fa fa-plus"></i>
+                        <i class="fa fa-plus me-1"></i>
                         {{ __('New') }}
                     </a>
 
                     <table class="table table-bordered list-table">
                         <thead>
-                        <tr class="table-success">
+                        <tr class="table-primary">
                             <th scope="col" class="td-image">Image</th>
                             <th scope="col" class="">Name</th>
                             <th scope="col" class="td-rating">Rating</th>
@@ -32,14 +32,14 @@
                                 <td>{{ $candyBar->name }}</td>
                                 <td class="td-rating">{{ $candyBar->rating }}</td>
                                 <td class="td-actions">
-                                    <a href="{{ route('candy_bar_edit', ['candy_bar' => $candyBar->id]) }}" class="btn btn-success"><i class="fa fa-pencil"></i></a>
-                                    <a href="javascript:" class="action-delete btn btn-danger" data-url="{{ route('candy_bar_delete', ['candy_bar' => $candyBar->id]) }}"><i class="fa fa-trash-o"></i></a>
+                                    <a href="{{ route('candy_bar_edit', ['candy_bar' => $candyBar->id]) }}" class="btn btn-info me-1" title="Edit"><i class="fa fa-pencil"></i></a>
+                                    <a href="javascript:" class="action-delete btn btn-danger" data-url="{{ route('candy_bar_delete', ['candy_bar' => $candyBar->id]) }}" title="Delete"><i class="fa fa-trash-o"></i></a>
                                 </td>
                             </tr>
                         @endforeach
                         </tbody>
                     </table>
-                    <div class="d-flex justify-content-center">
+                    <div class="d-flex justify-content-center cb-paginator">
                         {!! $candyBars->links() !!}
                     </div>
                 </div>

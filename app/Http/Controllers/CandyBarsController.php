@@ -14,9 +14,9 @@ class CandyBarsController extends Controller
         CandyBar::observe(new CandyBarObserver);
     }
 
-    public function index(Request $request)
+    public function index()
     {
-        $candyBars = CandyBar::own()->orderBy('rating', 'DESC')->paginate(4);
+        $candyBars = CandyBar::own()->orderBy('rating', 'DESC')->paginate(10);
 
         $data = [
             'candyBars' => $candyBars,

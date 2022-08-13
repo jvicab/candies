@@ -30,7 +30,7 @@ Route::get('/', [App\Http\Controllers\HomeController::class, 'index']);
 /** backend routes */
 
 Route::group(['middleware' => 'auth'], function (){
-    Route::get('/home', [App\Http\Controllers\DashboardController::class, 'index'])->name('home');
+    Route::get('/dashboard', [App\Http\Controllers\DashboardController::class, 'index'])->name('home');
 
     Route::group(['prefix' => 'candy-bars'], function (){
         Route::get('/', [App\Http\Controllers\CandyBarsController::class, 'index'])->name('candy_bar_list');
