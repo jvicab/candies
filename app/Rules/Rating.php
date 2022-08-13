@@ -4,7 +4,7 @@ namespace App\Rules;
 
 use Illuminate\Contracts\Validation\Rule;
 
-class FileName implements Rule
+class Rating implements Rule
 {
     public function __construct()
     {
@@ -13,11 +13,11 @@ class FileName implements Rule
 
     public function passes($attribute, $value)
     {
-        return (bool)preg_match('/^[^\\/?*:;{}\\\\]+$/', $value);
+        return (bool)preg_match('/^[1-5]+$/', $value);
     }
 
     public function message()
     {
-        return 'The :attribute must be a valid filename.';
+        return 'The :attribute must be an unsigned integer from 1 to 5.';
     }
 }

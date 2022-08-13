@@ -14279,7 +14279,7 @@ button.close {
   vertical-align: middle;
 }
 .list-table .td-image {
-  width: 110px;
+  width: 80px;
 }
 .list-table .td-image img {
   width: 100%;
@@ -14289,6 +14289,47 @@ button.close {
   width: 120px;
 }
 .list-table .td-actions {
-  width: 100px;
+  width: 120px;
   text-align: center;
+}
+
+.top-candy-bars {
+  padding-bottom: 30px;
+}
+.top-candy-bars .cb-header {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 26px;
+  font-weight: 600;
+}
+.top-candy-bars .items-container {
+  padding-bottom: 20px;
+}
+.top-candy-bars .items-container .item-container {
+  padding: 20px;
+}
+.top-candy-bars .items-container .item-container .item-box {
+  border: 1px solid #ddd;
+  background-color: #fbfbfb;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.top-candy-bars .items-container .item-container .item-box img {
+  border-bottom: 1px solid #ddd;
+  width: 100%;
+  height: auto;
+}
+.top-candy-bars .items-container .item-container .item-box .item-name {
+  font-size: 18px;
+  font-weight: 400;
+  margin-top: 15px;
+  margin-bottom: 0;
+}
+.top-candy-bars .items-container .item-container .item-box .item-rating {
+  font-size: 14px;
+  margin-top: 6px;
+  margin-bottom: 15px;
+}
+.top-candy-bars .items-container .item-container .item-box .item-rating span {
+  font-weight: 600;
 }
