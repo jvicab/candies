@@ -60,7 +60,7 @@ $img-path: "../images" !default;
         min-width: 60px;
         box-sizing: border-box;
         margin-left: 0;
-        background-image: url('#{$img-path}/dropzone_camera.png');
+     //   background-image: url('#{$img-path}/dropzone_camera.png');
         background-position: center center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -208,6 +208,11 @@ $img-path: "../images" !default;
     }
     .td-rating {
         width: 120px;
+    }
+
+    .td-actions {
+        width: 100px;
+        text-align: center;
     }
 }
 
