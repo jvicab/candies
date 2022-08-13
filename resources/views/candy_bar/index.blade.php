@@ -20,6 +20,7 @@
                             <th scope="col" class="td-image">Image</th>
                             <th scope="col" class="">Name</th>
                             <th scope="col" class="td-rating">Rating</th>
+                            <th scope="col" class="td-actions">Actions</th>
                         </tr>
                         </thead>
                         <tbody>
@@ -30,6 +31,10 @@
                                 </td>
                                 <td>{{ $candyBar->name }}</td>
                                 <td class="td-rating">{{ $candyBar->rating }}</td>
+                                <td class="td-actions">
+                                    <a href="{{ route('candy_bar_edit', ['candy_bar' => $candyBar->id]) }}" class="btn btn-success"><i class="fa fa-pencil"></i></a>
+                                    <a href="javascript:" class="action-delete btn btn-danger" data-url="{{ route('candy_bar_delete', ['candy_bar' => $candyBar->id]) }}"><i class="fa fa-trash-o"></i></a>
+                                </td>
                             </tr>
                         @endforeach
                         </tbody>
@@ -39,8 +44,11 @@
                     </div>
                 </div>
             </div>
-
         </div>
     </div>
+    <form id="delete_form" action="#" method="POST" class="d-none">
+        @csrf
+        {{ method_field('DELETE') }}
+    </form>
 </div>
 @endsection

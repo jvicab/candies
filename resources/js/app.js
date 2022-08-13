@@ -67,3 +67,8 @@ image_widget.html5imageupload({
     }
 });
 
+$('.td-actions').on('click', '.action-delete', function(){
+    let url = $(this).data('url');
+
+    $('#delete_form').attr('action', url).submit();
+});
